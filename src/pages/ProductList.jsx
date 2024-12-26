@@ -3,7 +3,7 @@ import Product from "../components/Product";
 import { Box, Grid2 } from "@mui/material";
 import ProductService from "../services/ProductService";
 import { transformProducts } from "../util/mainUtil";
-
+import Loader from "../components/Loader";
 function ProductList() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -25,7 +25,7 @@ function ProductList() {
     getProducts();
   }, []);
 
-  if (loading) return <p>Loading products...</p>;
+  if (loading) return <Loader />;
   if (error) return <p>Error: {error}</p>;
 
   return (
