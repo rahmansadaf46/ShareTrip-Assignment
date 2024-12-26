@@ -1,0 +1,63 @@
+.discount {
+  position: relative;
+}
+.discount-body {
+  position: absolute;
+  top: 22px;
+  left: -5px;
+  width: 140px;
+  z-index: 1;
+  display: flex;
+}
+.discount-banner {
+  display: inline-block;
+  position: relative;
+  background: linear-gradient(to right, #f27d00, #ffa03b);
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 3px 10px;
+  border-radius: 10px 0px 0px 0px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+}
+
+.shape {
+  position: absolute;
+  width: 10%;
+  height: 100%;
+}
+
+.background-shape {
+  background-color: #f7b166;
+  clip-path: polygon(84% 17%, 0 100%, 0 0, 55% 0, 66% 0, 81% 1%, 87% 3%, 89% 8%);
+  z-index: 1;
+}
+
+.overlay-shape {
+  background-color: #d77b26;
+  clip-path: polygon(74% 100%, 0 100%, 0 0, 75% 79%, 81% 85%, 84% 93%, 81% 97%);
+}
+
+.down-overlay-shape {
+  top: 22px;
+  height: 10px;
+  width: 10px;
+  background: linear-gradient(to top, #f7b166, #d66f00);
+  clip-path: polygon(100% 0, 1% 0, 100% 100%);
+}
+
+.MuiCard-root {
+  --Paper-shadow: none !important;
+  box-shadow: var(--Paper-shadow);
+  transition: box-shadow 0.3s ease;
+}
+
+.MuiCard-root:hover {
+  --Paper-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: var(--Paper-shadow);
+}
+.icon {
+  width: 24;
+  height: 24;
+  color: white;
+}
