@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Product from "../components/Product";
-import { Box, Grid2, Stack } from "@mui/material";
+import { Box, Grid2 } from "@mui/material";
 import ProductService from "../services/ProductService";
 import { transformProducts } from "../util/mainUtil";
 
@@ -36,36 +36,17 @@ function ProductList() {
         padding: 4,
       }}
     >
-      <Stack
-        direction="row"
-        spacing={1}
-        sx={{
-          justifyContent: "center",
-          alignItems: "stretch",
-          flexWrap: "nowrap",
-          mt: 1,
-        }}
+      <Grid2
+        container
+        spacing={2}
+        sx={{ justifyContent: "center", alignItems: "stretch" }}
       >
-        <Grid2
-          container
-          spacing={2}
-          sx={{ justifyContent: "center", alignItems: "center" }}
-        >
-          {products.map((product) => (
-            <Grid2
-              sx={{ height: "100%" }}
-              item
-              key={product.id}
-              xs={12}
-              sm={6}
-              md={4}
-              lg={3}
-            >
-              <Product {...product} />
-            </Grid2>
-          ))}
-        </Grid2>
-      </Stack>
+        {products.map((product) => (
+          <Grid2 item key={product.id} xs={12} sm={6} md={4} lg={3}>
+            <Product {...product} />
+          </Grid2>
+        ))}
+      </Grid2>
     </Box>
   );
 }
