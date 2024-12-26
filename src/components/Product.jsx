@@ -150,6 +150,7 @@ function Product({ id, name, image, price, oldPrice, discount, brand }) {
                     WebkitBackdropFilter: "blur(8px)",
                     width: "90%",
                     fontSize: "12px",
+                    textTransform: "none",
                   }}
                   onClick={() =>
                     dispatch(
@@ -177,6 +178,7 @@ function Product({ id, name, image, price, oldPrice, discount, brand }) {
                   WebkitBackdropFilter: "blur(8px)",
                   width: "90%",
                   fontSize: "12px",
+                  textTransform: "none",
                 }}
               >
                 <VisibilityIcon className="icon" />
